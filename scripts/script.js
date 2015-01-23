@@ -10,11 +10,19 @@ uploadButton.on('click', function() {
     // Create a reader object
     var reader = new FileReader();
     if (input.files.length) {
-        var textFile = input.files[0];
-        reader.readAsText(textFile);
-        $(reader).on('load', processFile);
+        if (input.files.length === 2) {
+            var textFile1 = input.files[0];
+            var textFile2 = input.files[1];
+            reader.readAsText(textFile1);
+            var txt1 = $(reader).on('load', processFile);
+            reader.readAsText(textFile2);
+            var txt2 = $(reader).on('load', processFile);
+            // MAIN FUNCTION CALL
+        } else {
+            alert('Please make sure to upload two text files.')
+        }
     } else {
-        alert('Please upload a file before continuing')
+        alert('Please upload a file before continuing.')
     }
 });
 
