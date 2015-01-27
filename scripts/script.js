@@ -1,6 +1,34 @@
 var fileInput = $('#files');
 var uploadButton = $('#upload');
 
+function generateMatrix(Nx, Ny) {
+
+}
+
+function processMatrix(normMatrix) {
+
+}
+
+function iterateJacobi(m) {
+
+}
+
+function iterateGauss(m) {
+
+}
+
+
+function processFile(e) {
+    var file = e.target.result,
+        results;
+    if (file && file.length) {
+        results = file.split("\n");
+        console.log(results)
+        $('#name').val(results[0]);
+        $('#age').val(results[1]);
+    }
+}
+
 uploadButton.on('click', function() {
     if (!window.FileReader) {
         alert('Your browser is not supported')
@@ -26,13 +54,5 @@ uploadButton.on('click', function() {
     }
 });
 
-function processFile(e) {
-    var file = e.target.result,
-        results;
-    if (file && file.length) {
-        results = file.split("\n");
-        console.log(results)
-        $('#name').val(results[0]);
-        $('#age').val(results[1]);
-    }
-}
+
+

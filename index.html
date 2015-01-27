@@ -19,8 +19,13 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+  <!--<![endif]-->
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -32,31 +37,35 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-      </div>
-    </div>
+    <div class="pure-g">
 
-    <!--
-    ================================================================================
-                                  Assignment 1
-    ================================================================================
-    -->
-    <div class="row">
-      <div class="four columns">
-        <!--
-        http://stackoverflow.com/questions/19038919/is-it-possible-to-upload-a-text-file-to-input-in-html-js
-        -->
-        <input type="files" id="files" value="choose files">
-        <input class="button-primary" id="upload" type="submit" value="Submit">
-      </div>
-      <div class="eight columns">
+      <div class="pure-u-1 navbar">
 
       </div>
+
+      <div class="pure-u-1 splash">
+
+      </div>
+
+      <div class="pure-u-4-5 row-select-container">
+
+      </div>
+
+      <div class="pure-u-1-5 submit-container">
+
+      </div>
+
+      <div class="pure-u-1 output-container">
+
+      </div>
+
+      <div class="pure-u-1 details-container">
+
+      </div>
+
     </div>
   </div>
+    <!--
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

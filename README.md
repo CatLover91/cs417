@@ -2,6 +2,7 @@ This repository contains my code for CS417
 
 generator
 step 1: Generate random matrix A of N x N size
+    n can be between -100 and +100 with a max of 4 decimal valuse
 step 2: Enforce diagonal dominance
     take absolute value of diagonals
     add absolute value of each row location to diagonal
