@@ -1,20 +1,44 @@
 $(function() {
-    var fileInput = $('#files');
-    var uploadButton = $('#upload');
 
-    function generateMatrix(Nx, Ny) {
+    function megaMatrix(Nx, Ny) {
+        this.Nx = Nx;
+        this.Ny = Ny;
+        this.origMatrix = initMat();
+        this.origBMatrix = initBMat();
+    }
+
+    var aRandomNumber = function() {
+        var result = Math.floor((Math.random() * 2000000) + 1);
+        result = (result - 1000000) / 10000;
+        return result;
+    };
+
+    megaMatrix.prototype.initMat = function() {
+        var result = [];
+        for(var i = 0; i < this.Ny; i++) {
+            var temp = [];
+            for(var j = 0; j < this.Nx; j++) {
+                temp.push(aRandomNumber());
+            }
+            result.push(temp);
+        }
+        return result;
+    };
+
+    megaMatrix.prototype.initBMat = function() {
+        var result = [];
+        for(var i = 0; i < this.Ny; i++) {
+            result.push(aRandomNumber());
+        }
+        return result;
+    };
+
+
+    megaMatrix.prototype.iterateJacobi = function() {
 
     }
 
-    function processMatrix(normMatrix) {
-
-    }
-
-    function iterateJacobi(m) {
-
-    }
-
-    function iterateGauss(m) {
+    megaMatrix.prototype.iterateGauss = function() {
 
     }
 
