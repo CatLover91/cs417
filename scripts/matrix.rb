@@ -3,18 +3,18 @@ require 'helpers'
 class funcMatrix
     #create a pre-made matrix
     def initialize(aFile)
-        
-    end
-    
-    #create a random matrix
-    def initialize(nx, ny)
-        @nx = nx;
-        @ny = ny;
-        this.origMatrix = initMat();
-        this.origBMatrix = initBMat();
+
     end
 
-    
+    #create a random matrix
+    def initialize(nx, ny)
+        @nx = nx
+        @ny = ny
+        @matrix = initMat()
+        @origBMatrix = initBMat()
+    end
+
+
 
     megaMatrix.prototype.initMat = function() {
         var result = [];
