@@ -11,10 +11,27 @@ class funcMatrix
         @nx = nx
         @ny = ny
         @matrix = initMat()
-        @origBMatrix = initBMat()
+        @bmatrix = initBMat()
     end
 
-
+    def x()
+        tempx = @nx
+        tempx
+    end
+    
+    def y()
+        tempy = @ny
+        tempy
+    end
+    
+    def toArray()
+        
+        
+    end
+    
+    def toArrayB()
+        
+    end
 
     megaMatrix.prototype.initMat = function() {
         var result = [];
