@@ -15,24 +15,18 @@ def jacobi(theMatrix)
     for(k=1;k<=totaliters;k++)
         
         # Alternately flip input and output matrices
-        if (k % 2 == 0) {
+        if k % 2 is 0
             a = u
             b = v
-        } else {
+        else 
             a = v
-            b = u
-        }
-            
+            b = u  
         # Compute Jacobi iteration
-        for(j = 1; j< n − 1; j++) 
+        for(j = 1; j < n − 1; j++) 
             for(i = 1; i < nX − 1; i++) 
                 ij = i + nX * j;
                 a[ij] = (f(i,j) + dxxinv * (b[ij − 1] + b[ij + 1])
-                + dyyinv * (b[ij − nX] + b[ij + nX])) * dcent;
-            end
-        end
+                + dyyinv * (b[ij − nX] + b[ij + nX])) * d cent;
             
         # Save and compute error if necessary
         outputanderror("jacobi out",a,k);
-    end
-end
