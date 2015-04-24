@@ -55,6 +55,7 @@ Gauss = (matrix) ->
 
         -- Save the result and compute error if necessary
         outputanderror "gsrb out", u, k
+
 SOR = (matrix) ->
     int i,j,ij,k;
     double error,u[m∗n],z;
