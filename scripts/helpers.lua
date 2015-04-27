@@ -1,3 +1,5 @@
+local alg = require "sci.alg"
+
 function takeInput(fileLocation)
     local headers = {}
     local inputMatrix = {}
@@ -14,7 +16,7 @@ function takeInput(fileLocation)
     end
     local outputObj = {}
     outputObj["headers"] = headers
-    outputObj["mat"] = inputMatrix
+    outputObj["mat"] = alg.toMat(inputMatrix)
     return outputObj
 end
 
