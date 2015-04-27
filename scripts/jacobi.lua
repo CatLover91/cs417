@@ -1,5 +1,5 @@
 function jacobi(theMatrix)
-    local ij = theMatrix.x() * theMatrix.y()
+    local ij = theMatrix:nrow() * theMatrix:ncol()
 
     local a = theMatrix.toArray()
     local b = theMatrix.toArrayB()
@@ -15,16 +15,16 @@ function jacobi(theMatrix)
     for k = 1, totaliters do
 
         -- Alternately flip input and output matrices
-        if k % 2 == 0
+        if(k % 2 == 0)
             a, b = u, v
         else
             a, b = v, u
         end
         -- Compute Jacobi iteration
-        for j = 1..(n-1) do
-            for i = 1, nX - 1 do
-                ij = i + nX * j
-                a[ij] = (f(i,j) + dxxinv * (b[ij - 1] + b[ij + 1]) + dyyinv * (b[ij - nX] + b[ij + nX])) * d cent;
+        for j = 1, theMatrix:nrow() - 1 do
+            for i = 1, theMatrix:ncol() - 1 do
+                ij = i + theMatrix:ncol() * j
+                a[ij] = (f(i,j) + dxxinv * (b[ij - 1] + b[ij + 1]) + dyyinv * (b[ij - theMatrix:ncol()] + b[ij + theMatrix:ncol()])) * d cent;
             end
         end
         -- Save and compute error if necessary
