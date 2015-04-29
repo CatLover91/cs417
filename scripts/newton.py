@@ -30,11 +30,4 @@ def newtons_method(f, x, dx=0.00001, tolerance=0.00001):
 x_approx = -6  # rough guess
 
 # f refers to the function f(x)
-x = newtons_method(f, x_approx)
-
-print("Solve for x in x**4 + 2*x**3 - 9*x**2 - 2*x + 8 = 0")
-print("x = %0.12f" % x)
-''' result ...
-Solve for x in 3*x**5 - 2*x**3 + 1*x - 37 = 0
-x = 1.722575335786
-'''
+print x = newtons_method(f, x_approx)

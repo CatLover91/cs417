@@ -23,11 +23,8 @@ def sor(A):
 
     #initial guess:
     x0 = zeros(3,1);
-
-
-    #SOR
-    #---------------
-
+    
+    #sor
     lambda=1.15;
     n=length(x0);
     x=x0;
@@ -37,10 +34,8 @@ def sor(A):
         xold=x;
         for i=1:n
             I = [1:i-1 i+1:n];
-            x(i) = (1-lambda)*x(i)+lambda/A(i,i)*( b(i)-A(i,I)*x(I) );
-        end
+            x(i) = (1-lambda)*x(i)+lambda/A(i,i)*( b(i)-A(i,I)*x(I) )
         error = norm(x-xold)/norm(x);
         iter = iter+1;
-    end
 
 x_SOR=x

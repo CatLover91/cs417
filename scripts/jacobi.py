@@ -14,19 +14,13 @@ inputMat = np.mat(inputArray)
 inputMat.reshape(int(header[0]), int(header[1]))
 inputMat.shape()
 
-#takes q3data as input
 def jacobi(A,b,N=25,x=None):
-
-    # Create an initial guess if needed
     if x is None:
         x = np.zeros(len(A[0]))
 
-    # Create a vector of the diagonal elements of A
-    # and subtract them from A
     D = np.diag(A)
     R = A - np.diagflat(D)
 
-    # Iterate for N times
     for i in range(N):
         x = (b - np.dot(R,x)) / D
     return x
